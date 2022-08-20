@@ -39,7 +39,7 @@ public class MorningRadio {
         playOpeningSong(weekday);
         songCounter++;
         for (int i = 0; i < Days; i++) {
-            if (nextSongDay == 7) {
+            if (nextSongDay > 7) {
                 nextSongDay = 1;
             }
             if (i > 0) {
@@ -49,7 +49,7 @@ public class MorningRadio {
             }
             for (int j = 0; j < maxNumberOfSongsPerDay; j++) {
 
-                playSong((int) (Math.random() * 5) + 1);
+                playSong((int) (Math.random() * 7) + 1);
                 songCounter++;
 
                 if (songCounter % 2 == 0) {
@@ -144,6 +144,9 @@ public class MorningRadio {
             case 3 -> System.out.println(Songs.SONG_3.getPlaySong());
             case 4 -> System.out.println(Songs.SONG_4.getPlaySong());
             case 5 -> System.out.println(Songs.SONG_5.getPlaySong());
+            case 6 -> System.out.println(Songs.SONG_6.getPlaySong());
+            case 7 -> System.out.println(Songs.SONG_7.getPlaySong());
+            case 8 -> System.out.println(Songs.SONG_8.getPlaySong());
         }
     }
 }
