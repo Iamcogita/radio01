@@ -75,13 +75,13 @@ public class MorningRadio {
         if (!openTransmission) {
             openTransmission = true;
             switch (weekday) {
-                case SUNDAY -> System.out.println(Songs.SUNDAY.getPlaySong());
-                case MONDAY -> System.out.println(Songs.MONDAY.getPlaySong());
-                case TUESDAY -> System.out.println(Songs.TUESDAY.getPlaySong());
-                case WEDNESDAY -> System.out.println(Songs.WEDNESDAY.getPlaySong());
-                case THURSDAY -> System.out.println(Songs.THURSDAY.getPlaySong());
-                case FRIDAY -> System.out.println(Songs.FRIDAY.getPlaySong());
-                case SATURDAY -> System.out.println(Songs.SATURDAY.getPlaySong());
+                case SUNDAY -> System.out.println(Songs.SUNDAY.getSong());
+                case MONDAY -> System.out.println(Songs.MONDAY.getSong());
+                case TUESDAY -> System.out.println(Songs.TUESDAY.getSong());
+                case WEDNESDAY -> System.out.println(Songs.WEDNESDAY.getSong());
+                case THURSDAY -> System.out.println(Songs.THURSDAY.getSong());
+                case FRIDAY -> System.out.println(Songs.FRIDAY.getSong());
+                case SATURDAY -> System.out.println(Songs.SATURDAY.getSong());
             }
         }
     }
@@ -106,13 +106,13 @@ public class MorningRadio {
     private void playNextSong(int next) {
         openTransmission();
         switch (next) {
-            case 1 -> System.out.println(Songs.SUNDAY.getPlaySong());
-            case 2 -> System.out.println(Songs.MONDAY.getPlaySong());
-            case 3 -> System.out.println(Songs.TUESDAY.getPlaySong());
-            case 4 -> System.out.println(Songs.WEDNESDAY.getPlaySong());
-            case 5 -> System.out.println(Songs.THURSDAY.getPlaySong());
-            case 6 -> System.out.println(Songs.FRIDAY.getPlaySong());
-            case 7 -> System.out.println(Songs.SATURDAY.getPlaySong());
+            case 1 -> System.out.println(Songs.SUNDAY.getSong());
+            case 2 -> System.out.println(Songs.MONDAY.getSong());
+            case 3 -> System.out.println(Songs.TUESDAY.getSong());
+            case 4 -> System.out.println(Songs.WEDNESDAY.getSong());
+            case 5 -> System.out.println(Songs.THURSDAY.getSong());
+            case 6 -> System.out.println(Songs.FRIDAY.getSong());
+            case 7 -> System.out.println(Songs.SATURDAY.getSong());
             default -> throw new IllegalStateException("Unexpected value: " + next);
         }
     }
@@ -121,32 +121,32 @@ public class MorningRadio {
     public void playCommercial() {
         double random = Math.random();
         if (random < 0.3) {
-            System.out.println(Songs.COMMERCIAL02.getPlaySong());
+            System.out.println(Songs.COMMERCIAL02.getSong());
             return;
         }
         if (random > 0.6) {
-            System.out.println(Songs.COMMERCIAL01.getPlaySong());
+            System.out.println(Songs.COMMERCIAL01.getSong());
             return;
         }
-        System.out.println(Songs.COMMERCIAL03.getPlaySong());
+        System.out.println(Songs.COMMERCIAL03.getSong());
     }
 
     public void playSong(int songNumber) {
         if (isTalker) {
             if (Math.random() > 0.5) {
-                System.out.println(Songs.PODCAST.getPlaySong());
+                System.out.println(Songs.PODCAST.getSong());
             }
-            System.out.println(TALK_SHOW.getPlaySong());
+            System.out.println(TALK_SHOW.getSong());
         }
         switch (songNumber) {
-            case 1 -> System.out.println(Songs.SONG_1.getPlaySong());
-            case 2 -> System.out.println(Songs.SONG_2.getPlaySong());
-            case 3 -> System.out.println(Songs.SONG_3.getPlaySong());
-            case 4 -> System.out.println(Songs.SONG_4.getPlaySong());
-            case 5 -> System.out.println(Songs.SONG_5.getPlaySong());
-            case 6 -> System.out.println(Songs.SONG_6.getPlaySong());
-            case 7 -> System.out.println(Songs.SONG_7.getPlaySong());
-            case 8 -> System.out.println(Songs.SONG_8.getPlaySong());
+            case 1 -> System.out.println(Songs.SONG_1.getSong());
+            case 2 -> System.out.println(Songs.SONG_2.getSong());
+            case 3 -> System.out.println(Songs.SONG_3.getSong());
+            case 4 -> System.out.println(Songs.SONG_4.getSong());
+            case 5 -> System.out.println(Songs.SONG_5.getSong());
+            case 6 -> System.out.println(Songs.SONG_6.getSong());
+            case 7 -> System.out.println(Songs.SONG_7.getSong());
+            case 8 -> System.out.println(Songs.SONG_8.getSong());
         }
     }
 }

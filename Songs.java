@@ -24,14 +24,14 @@ public enum Songs {
     COMMERCIAL01("( - time for an ad - )"),
     COMMERCIAL02("((( CONSUME ))) ((( OBEY ))) "),
     COMMERCIAL03("( SILLY COMMERCIAL JINGLE PLAYS )");
-    
+
     private String playSong;
 
     Songs(String playSong) {
         this.playSong = playSong;
     }
 
-    public String getPlaySong() {
+    public String getSong() {
         return this.playSong;
     }
 
